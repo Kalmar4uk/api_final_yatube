@@ -3,17 +3,17 @@ from rest_framework.routers import DefaultRouter
 
 from api.views import CommentViewSet, FollowViewSet, GroupViewSet, PostViewSet
 
-v1_router = DefaultRouter()
-v1_router.register(r'posts', PostViewSet)
-v1_router.register(r'groups', GroupViewSet)
-v1_router.register(
-    r'posts/(?P<post_id>\d+)/comments',
+router_v1 = DefaultRouter()
+router_v1.register(r'api/v1/posts', PostViewSet)
+router_v1.register(r'api/v1/groups', GroupViewSet)
+router_v1.register(
+    r'api/v1/posts/(?P<post_id>\d+)/comments',
     CommentViewSet,
     basename='comments'
 )
 
 urlpatterns = [
-    path('api/v1/', include(v1_router.urls)),
+    path('', include(router_v1.urls)),
     path('api/v1/', include('djoser.urls.jwt')),
     path(
         'api/v1/follow/',

@@ -37,7 +37,7 @@ pip install -r requitements.txt
 cd yatube_api
 ```
 ```
-python manage.py migrade
+python manage.py migrate
 ```
 ```
 python mange.py runserver
