@@ -72,3 +72,10 @@ python mange.py runserver
 ```
 127.0.0.1:8000/api/v1/posts/{post_id}/comments/{comment_id}/
 ```
+
+**В проекте используется:**
+
+* Django 3.2.16
+* Django Rest Framework 3.12.4
+
+**Выполнил Беспалов Роман** `https://github.com/Kalmar4uk`
